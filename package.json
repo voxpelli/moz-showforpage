@@ -1,6 +1,6 @@
 {
     "name": "showforpage",
-    "description": "Show for Page detectors for Jetpacks",
+    "description": "Page load related listeners for Jetpacks",
     "keywords": ["events", "showforpage"],
     "author": "Pelle Wessman (http://kodfabrik.se/) <pelle@kodfabrik.se>",
     "version": "0.2.0",
