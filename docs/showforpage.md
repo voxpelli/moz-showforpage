@@ -34,7 +34,10 @@ Creates a object that adds all of the listeners.
   A callback called when the location is changed in the location bar. Is called with the HTML page as its context and the URL of the page as its only parameter.
 
 @prop [onPageShow] {Function}
-  Same as `onLocationChange`, but instead called when the page is loaded or when the hash is changed. Also includes an additional second parameter that is `true` if the background page is loaded in background and otherwise false. This second parameter is useful as it indicates that `onLocationChange` likely hasn't been called prior to `onPageShow`
+  Same as `onLocationChange`, but instead called when the page is loaded and when a tab is selected. Also includes an additional second parameter that is `true` if the background page is loaded in background and otherwise false. This second parameter is useful as it indicates that `onLocationChange` likely hasn't been called prior to `onPageShow`.
+
+@prop [onLink] {Function}
+   A callback called when a new link element is added to the page. Is called with the URL of the current page as its first argument, an object containing all link data as its second argument (rels, href and title) and like `onPageShow` includes a last parameter that indicates if the page is loaded in the background or not. The function is called with the link element as its context.
 </api>
 
 <api name="remove">

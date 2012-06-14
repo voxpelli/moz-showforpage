@@ -23,8 +23,9 @@ The experimental `showforpage` API allows for easy detection of new page loads i
 
 ## Options
 
-* **onLocationChange** - a callback that checks if the button should be showed on the current page or not. Called when the URL is changed. (optional)
-* **onPageShow** - like `onLocationChange` but called when the page is loaded. (optional)
+* **onLocationChange** - a callback that's called when the URL is changed. (optional)
+* **onPageShow** - a callback that's called when the page has loaded. (optional)
+* **onLink** - a callback that's called when a new link element has been added to the page. (optional)
 
 ### Option syntax: onLocationChange
 
@@ -33,6 +34,10 @@ Should be a function. Is called with the URL of the current page as a single arg
 ### Option syntax: onPageShow
 
 Same as `onLocationChange` but also includes an additional second parameter that is `true` if the background page is loaded in background and otherwise false. That second parameter is useful as it indicates that `onLocationChange` likely hasn't been called prior to `onPageShow`.
+
+### Option syntax: onLink
+
+Should be a function. Is called with the URL of the current page as its first argument, an object containing all link data as its second argument (rels, href and title) and includes a last parameter like `onPageShow` that indicates if the page is loaded in the background. The function is called with the link element as its context.
 
 ## How to use
 
@@ -47,6 +52,11 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 * **Flattr Firefox Add-on**: [Source](https://github.com/flattr/fx-flattr-addon)
 
 ## Changelog
+
+### 0.2.0
+
+* New `onLink` listener that listens for new link elements that are added to the page
+* No longer triggers `onPageShow` events on hash changes - use `onLocationChange` change for that
 
 ### 0.1.0
 
