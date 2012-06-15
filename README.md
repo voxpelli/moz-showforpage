@@ -58,6 +58,7 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 * New `onLink` listener that listens for new link elements that are added to the page
 * No longer triggers `onPageShow` events on hash changes and tab selects - use `onLocationChange` change for that
 * `onLocationChange` is now called in the context of the page document and is given a second parameter indicating whether the document has been loaded
+* Triggers `onLocationChange` on active tabs on initialization
 
 ### 0.1.0
 
