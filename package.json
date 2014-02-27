@@ -3,6 +3,6 @@
     "description": "Page load related listeners for Jetpacks",
     "keywords": ["events", "showforpage"],
     "author": "Pelle Wessman (http://kodfabrik.se/) <pelle@kodfabrik.se>",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "license": "The MIT License (http://www.opensource.org/licenses/mit-license.php)"
 }

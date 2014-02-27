@@ -53,6 +53,10 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 
 ## Changelog
 
+### 0.2.2
+
+* Support for Firefox 29 by no longer using the tab-browser SDK module
+
 ### 0.2.1
 
 * Support for Mozilla's Add-on SDK version 1.13b1
